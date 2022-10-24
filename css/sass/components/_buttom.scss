@@ -1,0 +1,13 @@
+.main-buttom{
+    cursor: pointer;
+    background-color: rgba($redColor,.5);
+    color: white;
+    border: 1px solid $redColor;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+    @include transition;
+    &:hover{
+        background-color: $redColor;
+    }
+}

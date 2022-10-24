@@ -1,0 +1,31 @@
+*{
+    @include prefixer(box-sizing, border-box, webkit moz o )
+}
+
+
+.container{
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    @media (#{$Mobile}){
+        width:100%;
+    }
+    @media (#{$minMedium}){
+        width: 750px;
+    }
+    @media (#{$medium}){
+        width: 970px;
+    }
+    @media (#{$lg}){
+        width: 1170px;
+    }
+}
+
+
+$number-grid:12;
+@for $i from 1 through $number-grid{
+    .col-#{$i}{
+        width: percentage(($i / $number-grid));
+    }
+}

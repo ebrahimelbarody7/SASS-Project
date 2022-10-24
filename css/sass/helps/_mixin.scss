@@ -1,0 +1,55 @@
+@mixin medium {
+    @media (min-width:992px) and (max-width:1199px){
+        @content;
+    }
+}
+
+/*
+//overlay mixin
+*/
+@mixin overlay($color,$opacity) {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color, $opacity);
+}
+
+/*
+//prefix mixin
+*/
+@mixin prefixer($property,$value,$prefixes:()) {
+    #{$property}:$value;
+    @each $prefix in $prefixes {
+        #{"-" + $prefix + "-" + $property}:$value;
+    }
+}
+
+/*
+//animation
+*/
+
+// @mixin animation {
+//     @keyframes  fadeInOut{
+//         @content
+//     }
+// }
+@mixin keyframe($nameAnimation) {
+    @keyframes fadeInOut {
+        @content;
+    }
+    @-webkit-keyframes fadeInOut {
+        @content;
+    }
+}
+
+
+/* transition*/
+@mixin transition {
+    transition: .4s;
+}
+
+
+
+

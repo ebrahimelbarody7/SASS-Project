@@ -1,0 +1,151 @@
+/* start slider*/
+.slider{
+    p{
+        font: {
+            size: 15px;
+            style: italic;
+            family: Verdana, Geneva, Tahoma, sans-serif;
+            weight:bold;
+        }
+        line-height: 1.5;
+        padding: 0 20px;
+        color: #5e5e5e;
+        text-align: center;
+    }
+    .image{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 100%;
+        }
+    }
+    .bullets{
+        text-align: center;
+        li{
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+            display: inline-block;
+            &.active{
+                border: 2px solid black;
+                background-color: white;
+            }
+            &:hover{
+                border: 2px solid black;
+                background-color: white;
+            }
+        }
+    }
+}
+/* end slider*/
+
+/*start services */
+.services{
+    padding-bottom: 10px;
+    .boxs{
+        // display: flex;
+        text-align: center;
+        .service-box{
+            @media (#{$Mobile}) {
+                text-align: center;
+                width: 100%;
+                float: none;
+            }
+            float: $float-left;
+            width: calc(100% / 3);
+            padding-bottom: 20px;
+            &:not(:last-of-type){
+                padding-right:20px;
+            }
+            h3{
+                font-size: 24px;
+            }
+            p{
+                color: $pragColor;
+                line-height: 1.6;
+            }
+            a{
+                color: red;
+            }
+        }
+    }
+}
+
+/*end services */
+
+/*start players*/
+.players{
+    .players-box{
+        @media (#{$Mobile}) {
+            width: calc(100% / 2);
+        }
+        @media (#{$meniMobile}) {
+            width: 100% ;
+        }
+        @media (#{$minMedium}) {
+            width: calc(100% / 3);
+        }
+        @media (#{$lg}) {
+            width: calc(100% / 5);
+        }
+        float: $float-left;
+        // width: calc(100% / 5);
+        padding-bottom: 20px;
+        padding-right:20px;
+        img{
+            width: 100%;
+        }
+        h4{
+            color: #666;
+            span{
+                color: $pragColor;
+                font-size: 16px;
+                font-weight: 200;
+            }
+        }
+        p{
+            width: 80%;
+            line-height: 1.6;
+            color: $pragColor;
+        }
+        a{
+            color: $redColor;
+        }
+    }
+}
+/*End players*/
+
+/*start ipsum*/
+.ipsum{
+    .ipsum-box{
+        @media (#{$Mobile}) {
+            width: calc(50% - 40px);
+            // float: $float-left;
+        }
+        @media (#{$meniMobile}) {
+            width: 100%;
+        }
+        width: calc(94% / 3);
+        float: $float-left;
+        &:not(:last-of-type){
+            padding-bottom: 20px;
+            margin-right: 3%;
+        }
+        img{
+            width: 100%;
+        }
+    }
+}
+/*End ipsum*/
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+.header{
+    padding: 20px 0;
+    overflow: hidden;
+    border-bottom: 1px solid $grayColor;
+    @media (#{$minMedium}) {
+        text-align: center;
+    }
+    .logo{
+        @media (#{$Mobile}) {
+            width: 30%;
+            float: left;
+        }
+        @media (#{$minMedium}) {
+            width: 100%;
+        }
+        @media (#{$medium}) {
+            width: 30%;
+            float: left;
+        }
+        h1{
+            margin-bottom: 0;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+        p{
+            margin-top: 5px;
+            color: #666;
+        }
+    }
+    .navbar{
+        background-color: $redColor;
+        border-radius:  15px;
+        overflow: hidden;
+        @media (#{$Mobile}) {
+            display: none;;
+        }
+        @media (#{$minMedium}) {
+            width: 100%;
+        }
+        @media (#{$medium}) {
+            width: 70%;
+            float: left;
+        }
+        li{
+            width: 20%;
+            float: left;
+            font-size: 18px;
+            text-align: center;
+            a{
+                padding: 20px 0px;
+                display: block;
+                color: #fff;
+                &:hover{
+                    color: #ddd;
+                }
+            }
+        }
+    }
+    .menu{
+        float: left;
+        text-align: right;
+        font-size: 50px;
+        width: 70%;
+        padding-top: 20px;
+        cursor: pointer;
+        @media #{$minMedium} {
+            display: none;
+        }
+    }
+    .text{
+        overflow: hidden;
+        ul{
+            @include transition;
+            padding: 0;
+            display: none;
+            li{
+                margin-bottom: 5px;
+                padding: 20px;
+                background-color: $redColor;
+                color: #fff;
+                cursor: pointer;
+            }
+            &.active{
+                display: block;
+            }
+        }
+    }
+}
